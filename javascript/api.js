@@ -9,9 +9,9 @@ const api = {
     
     get() {
         const json = api.storage.getItem('user');
-        // if(!json) {
-        //     return null;
-        // }
+        if(!json) {
+            return null;
+        }
         const user = JSON.parse(json);
         return user;
     }

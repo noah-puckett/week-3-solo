@@ -5,6 +5,7 @@ function makeUser(formData) {
         //TODO: figure out how to add the rest of the fields
         //without breaking the build/TDD
     };
+
     return user;
 }
 

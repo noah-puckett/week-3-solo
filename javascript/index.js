@@ -8,7 +8,7 @@ form.addEventListener('submit', (event) => {
 
     const formData = new FormData(form);
     const user = makeUser(formData);
-    api.get(user);
+    api.set(user);
 
     //TODO: see if this is formatted correctly and works
     window.location = '../html/map.html';
