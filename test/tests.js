@@ -1,14 +1,13 @@
-import makeUser from '../src/services/make-user.js';
-
+import makeUser from '../javascript/make-user.js';
+import api from '../javascript/api.js';
 const test = QUnit.test;
+QUnit.testStart(() => {
+    sessionStorage.clear();
+});
 QUnit.module('make user');
 
 test('makeUser takes form data and returns correctly structured object', (assert) => {
-    //Arrange
-
-    //create FAKE form data object to test AGAINST
     const formData = new FormData();
-    //SET our test key/value pair
     formData.set('name', 'test');
     formData.set('goal', 'shower');
 
@@ -17,9 +16,25 @@ test('makeUser takes form data and returns correctly structured object', (assert
         goal: 'shower'
     };
 
-    //Act 
-    // Call the function you're testing and set the result to a const
     const result = makeUser(formData);
-    //Assert
     assert.deepEqual(expected, result);
+});
+
+api.storage = sessionStorage;
+
+test('api utility correctly roundtrips things I guess?', (assert) => {
+    //arrange
+    const expected = {
+        name: 'test',
+        goal: 'eat'
+    };
+
+    //act
+    api.set(expected);
+    const result = api.get();
+
+
+    //assert
+    assert.deepEqual(result, expected);
+
 });
