@@ -5,6 +5,7 @@ QUnit.testStart(() => {
     sessionStorage.clear();
 });
 QUnit.module('make user');
+api.storage = sessionStorage;
 
 test('makeUser takes form data and returns correctly structured object', (assert) => {
     const formData = new FormData();
@@ -19,8 +20,6 @@ test('makeUser takes form data and returns correctly structured object', (assert
     const result = makeUser(formData);
     assert.deepEqual(expected, result);
 });
-
-api.storage = sessionStorage;
 
 test('api utility correctly roundtrips things I guess?', (assert) => {
     //arrange

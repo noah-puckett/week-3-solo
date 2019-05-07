@@ -1,5 +1,5 @@
 const api = {
-    storage: sessionStorage,
+    storage: localStorage,
     
     set(user) {
         const json = JSON.stringify(user);
@@ -9,6 +9,9 @@ const api = {
     
     get() {
         const json = api.storage.getItem('user');
+        // if(!json) {
+        //     return null;
+        // }
         const user = JSON.parse(json);
         return user;
     }
