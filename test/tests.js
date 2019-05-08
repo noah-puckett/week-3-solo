@@ -1,5 +1,5 @@
-import makeUser from '../javascript/make-user.js';
-import api from '../javascript/api.js';
+import makeUser from '../src/home/make-user.js';
+import api from '../src/services/api.js';
 const test = QUnit.test;
 QUnit.testStart(() => {
     sessionStorage.clear();
