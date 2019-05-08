@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>You wake up,</title>
+    <link rel="stylesheet" href="./src/home/index.css">
+</head>
+<body>
+    <header>
+        <h1>You wake up,</h1>
+    </header>
+
+    <main>
+        <form id="form">
+            <p>
+                <label for="name">Who are you?
+                <input id="name" name="name" type="text">
+                </label>
+                
+                <p>What's going on for you today?</p>
+
+                <label for="pain">Chronic pain
+                <input required type="radio" name="disability" value="pain" id="pain">
+                </label>
+
+                <label for="fibro">Fibromyalgia
+                <input required type="radio" name="disability" value="fibro" id="fibro">
+                </label>
+
+                <label for="fatigue">Chronic Fatigue
+                <input required type="radio" name="disability" value="fatigue" id="fatigue">
+                </label>
+            </p>
+            <button id="button">spoon theory, anyone?</button>
+        </form>
+    </main>
+    <script type="module" src="./src/home/index.js"></script>
+</body>
+</html>
+
+<!--game starts with waking up, pick your disability (class)
+then you're given spoons (increment/decrement) and time (hours, increment/decrement)-->

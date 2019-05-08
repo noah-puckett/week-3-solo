@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Map</title>
+    <link rel="stylesheet" href="./src/home/index.css">
+</head>
+<body>
+    <h1>Your Quests</h1>
+    <!--this will be the page for A SINGLE quest-->
+    <header>
+        <title>You wake up,</title>
+        <img src="./assets/spoon.png" alt="">
+        <!--we place the text outside of the span so it doesn't get overwritten-->
+        name: <span id="name"></span>
+        disability: <span id="disability"></span>
+        spoons: <span id="spoons"></span>
+        time:<span id="time"></span>
+    </header>
+
+    <main>
+        <h2 id="title">Quest Title</h2>
+        <p id="description">SINGLE quest description</p>
+
+        <form id="choice-form">
+            <label for="option1">
+                <input required type="radio" name="option" id="option1" value="option1">
+                option 1
+            </label>
+
+            <label for="option2">
+                <input required type="radio" name="option" id="option2" value="option2">
+                option 2
+            </label>
+
+            <label for="option3">
+                <input required type="radio" name="option" id="option3" value="option3">
+                option 3
+            </label>
+
+            <button>submit form?</button>
+        </form>
+
+        <section id="result" class="hidden">
+        <p id="result-description">RESULTS</p>
+     
+            <p>
+                <a href="./map.html">back to quests</a>
+            </p>
+        </section>
+    </main>
+
+    <script type="module" src="./src/services/quest-data.js"></script>
+</body>
+</html>
+
+
+<!-- <label for="dress">
+        <input required type="radio" name="goal" id="dress" value="dress">
+        get dressed
+        <img src="./assets/spoon.png" alt="a picture of a spoon">
+        <img src="./assets/spoon.png" alt="a picture of a spoon">
+    </label>
+    </p>
+    <p>
+    <label for="shower">
+        <input required type="radio" name="goal" id="shower" value="shower">
+        shower
+        <img src="./assets/spoon.png" alt="a picture of a spoon">
+        <img src="./assets/spoon.png" alt="a picture of a spoon">
+        <img src="./assets/spoon.png" alt="a picture of a spoon">
+    </label>
+    </p>
+
+    <p>
+    <label for="eat">
+        <input required type="radio" name="goal" id="eat" value="eat">
+        eat something
+        <img src="./assets/spoon.png" alt="a picture of a spoon">
+        <img src="./assets/spoon.png" alt="a picture of a spoon">
+        </label>
+    </p>
+
+    <p>
+    <label for="work">
+        <input required type="radio" name="goal" id="work" value="work">
+        go to work
+        <img src="./assets/spoon.png" alt="a picture of a spoon">
+        <img src="./assets/spoon.png" alt="a picture of a spoon">
+        <img src="./assets/spoon.png" alt="a picture of a spoon">
+        <img src="./assets/spoon.png" alt="a picture of a spoon">
+        <img src="./assets/spoon.png" alt="a picture of a spoon">
+        </label> -->

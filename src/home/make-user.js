@@ -1,11 +1,11 @@
 function makeUser(formData) {
     const user = {
         name: formData.get('name'),
-        goal: formData.get('goal'),
+        disability: formData.get('disability'),
         //TODO: figure out how to add the rest of the fields
         //without breaking the build/TDD
-        // spoons: formData.set('spoons', '5'),
-        // time: formData.set('time', '16')
+        spoons: 5,
+        time: 16
     };
 
     return user;
