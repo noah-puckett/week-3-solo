@@ -1,5 +1,4 @@
 import api from '../src/services/api.js';
-import quests from '../src/services/quest-data.js';
 const test = QUnit.test;
 
 QUnit.module('api');
@@ -18,11 +17,6 @@ test('api utility correctly roundtrips things I guess?', (assert) => {
     //assert
     assert.deepEqual(result, expected);
 });
-
-//make a function where NO TAKE ONLY THROW?
-function getQuests() {
-    return quests;
-}
 
 test('getQuests, will it work?', (assert) => {
     //arrange
@@ -51,7 +45,7 @@ test('getQuests, will it work?', (assert) => {
     }];
 
     //act
-    const result = getQuests();
+    const result = api.getQuests();
 
     //assert
     assert.deepEqual(result, expected);
