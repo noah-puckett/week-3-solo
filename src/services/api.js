@@ -20,6 +20,18 @@ const api = {
 
     getQuests() {
         return quests;
+    },
+
+    getQuest(id) {
+        const quests = api.getQuests();
+    
+        for(let i = 0; i < quests.length; i++) {
+            const quest = quests[i];
+    
+            if(id === quest.id) {
+                return quest;
+            }
+        }
     }
 };
 export default api;

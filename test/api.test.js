@@ -52,6 +52,7 @@ test('getQuests, will it work?', (assert) => {
         }]
     },
     
+    
     {
         id: 'eat',
         title: 'Eat Breakfast',
@@ -81,6 +82,7 @@ test('getQuests, will it work?', (assert) => {
             time: + 1
         }]
     }
+    
     ];
 
 
@@ -91,19 +93,18 @@ test('getQuests, will it work?', (assert) => {
     assert.deepEqual(result, expected);
 });
 
-// function getQuest(id) {
-//     const quest = api.getQuests;
 
-//     return quest[id];
-// }
-// test('getQuest(id) function', (assert) => {
-//     //function takes an ID and returns the quest with MATCHING ID
-//     //arrange
-//     const expectedQuest = quests[1];
+test('getQuest(id) function', (assert) => {
+    //function takes an ID and returns the quest with MATCHING ID
+    //arrange
 
-//     //act
-//     const foundQuest = api.getQuests(expectedQuest.id);
+    const quests = api.getQuests();
+    const expectedQuest = quests[1];
 
-//     //assert
-//     assert.deepEqual(foundQuest, expectedQuest);
-// });
+
+    //act
+    const foundQuest = api.getQuest(expectedQuest.id);
+
+    //assert
+    assert.deepEqual(foundQuest, expectedQuest);
+});
