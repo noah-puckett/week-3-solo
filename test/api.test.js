@@ -1,4 +1,5 @@
 import api from '../src/services/api.js';
+// import quests from '../src/services/quest-data.js';
 const test = QUnit.test;
 
 QUnit.module('api');
@@ -89,3 +90,20 @@ test('getQuests, will it work?', (assert) => {
     //assert
     assert.deepEqual(result, expected);
 });
+
+// function getQuest(id) {
+//     const quest = api.getQuests;
+
+//     return quest[id];
+// }
+// test('getQuest(id) function', (assert) => {
+//     //function takes an ID and returns the quest with MATCHING ID
+//     //arrange
+//     const expectedQuest = quests[1];
+
+//     //act
+//     const foundQuest = api.getQuests(expectedQuest.id);
+
+//     //assert
+//     assert.deepEqual(foundQuest, expectedQuest);
+// });
