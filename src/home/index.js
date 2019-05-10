@@ -1,7 +1,6 @@
 import makeUser from './make-user.js';
 import api from '../services/api.js';
 
-
 const form = document.getElementById('form');
 
 form.addEventListener('submit', (event) => {
@@ -12,5 +11,4 @@ form.addEventListener('submit', (event) => {
     api.set(user);
 
     window.location = '../../map.html';
-    
 }); 

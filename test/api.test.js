@@ -52,7 +52,6 @@ test('getQuests, will it work?', (assert) => {
         }]
     },
     
-    
     {
         id: 'eat',
         title: 'Eat Breakfast',
@@ -84,8 +83,6 @@ test('getQuests, will it work?', (assert) => {
     }
     
     ];
-
-
     //act
     const result = api.getQuests();
 
@@ -93,18 +90,15 @@ test('getQuests, will it work?', (assert) => {
     assert.deepEqual(result, expected);
 });
 
-
 test('getQuest(id) function', (assert) => {
     //function takes an ID and returns the quest with MATCHING ID
     //arrange
-
     const quests = api.getQuests();
     const expectedQuest = quests[1];
 
-
     //act
     const foundQuest = api.getQuest(expectedQuest.id);
-
+    
     //assert
     assert.deepEqual(foundQuest, expectedQuest);
 });

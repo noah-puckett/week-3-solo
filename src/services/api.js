@@ -6,7 +6,6 @@ const api = {
     set(user) {
         const json = JSON.stringify(user);
         api.storage.setItem('user', json);
-        
     },
     
     get() {

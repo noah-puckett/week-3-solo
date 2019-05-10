@@ -1,7 +1,5 @@
 import api from './api.js';
 
-
-//create function around this???
 function loadProfile(user) {
     user = api.get();
     const name = document.getElementById('name');

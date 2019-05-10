@@ -7,7 +7,6 @@ function makeUser(formData) {
         spoons: 5,
         time: 16
     };
-
     return user;
 }
 export default makeUser;
