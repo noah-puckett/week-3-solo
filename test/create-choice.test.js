@@ -10,7 +10,7 @@ test('OBJECT IN, DOM ELEMENT OUT', (assert) => {
         description: 'Get out of bed and head for the shower!',
     };
     // use your static html example
-    const expected = '<label for="shower">Get out of bed and head for the shower!<input required="true" type="radio" name="shower" id="shower" value="shower"></label>';
+    const expected = '<label for="shower">Get out of bed and head for the shower!<input required="" type="radio" name="choice" id="shower" value="shower"></label>';
 
     //createfunction returns dom
     const dom = createChoice(choice);

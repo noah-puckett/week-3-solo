@@ -31,7 +31,6 @@ const quest1 = {
     }]
 };
 
-
 const quest2 = {
     id: 'eat',
     title: 'Eat Breakfast',

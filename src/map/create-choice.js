@@ -3,9 +3,9 @@ function createChoice(choice) {
     label.textContent = choice.description;
     label.htmlFor = choice.id;
     const input = document.createElement('input');
-    input.setAttribute('required', true);
+    input.required = true;
     input.type = 'radio';
-    input.name = choice.id;
+    input.name = 'choice';
     input.id = choice.id;
     input.value = choice.id;
     label.appendChild(input);

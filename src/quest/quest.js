@@ -7,22 +7,18 @@ const user = api.get();
 loadProfile(user);
 
 //"reference all needed DOM nodes", they said. It will be intuitive, they implied.
-
-//I don't know if I need to get the header/profile section since... I already called loadProfile???
 const questTitle = document.getElementById('title');
 const questDescription = document.getElementById('description');
 const choiceForm = document.getElementById('choice-form');
-const resultSection = document.getElementById('result');
-const resultText = document.getElementById('result-description');
-//TODO: label id???
 //are these all of them??? do I need more? less??
 
 //read the ID from query using URLSearchParams
 const searchParams = new URLSearchParams(window.location.search);
-const id = searchParams.get('id');
-
+const id = searchParams.get('quest');
+//get individual quest using api method and passing id FROM url
 const quest = api.getQuest(id);
 
+//populate dom text with quest text
 questTitle.textContent = quest.id;
 questDescription.textContent = quest.description;
 
@@ -32,9 +28,10 @@ for(let i = 0; i < quest.choices.length; i++) {
     const choice = quest.choices[i];
     const childEl = createChoice(choice);
     choiceForm.appendChild(childEl);
-
 }
 
-
-//probably add event listener?
-const submitButton = document.getElementById('submit-choice');
+choiceForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+   //do something with... formData? 
+   // const formData = new FormData(choiceForm);
+});
