@@ -1,0 +1,13 @@
+img {
+    height: 50px;
+    width: auto;
+}
+
+a {
+    display: block;
+}
+
+a:visited {
+    display: block;
+    color: #A04365;
+}

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Gugi|Just+Another+Hand');
+
+h1 {
+    font-family: 'Gugi', cursive;
+    font-size: 80px;
+    background-color: #A04365;
+}
+
+body {
+    text-align: center;
+    font-family: 'Just Another Hand', cursive;
+    font-size: 45px;
+    color: #273043;
+    background-color: #D1AB50;
+}
+
+img {
+    height: 50px;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #A04365;
+}

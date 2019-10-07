@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quest</title>
+    <link rel="stylesheet" href="./src/home/index.css">
+</head>
+<body>
+    <!--this will be the page for A SINGLE quest-->
+    <header>
+        <img src="./assets/spoon.png" alt="">
+        <!--we place the text outside of the span so it doesn't get overwritten-->
+        name: <span id="name"></span>
+        disability: <span id="disability"></span>
+        spoons: <span id="spoons"></span>
+        time:<span id="time"></span>
+    </header>
+
+    <main>
+        <h2 id="title"></h2>
+        <p id="description"></p>
+
+        <form id="choice-form">
+            <!-- <label for="THING ID">
+                <input required type="radio" name="THING ID" id="THING ID" value="THING ID">
+            </label> -->
+                
+            <button id="submit-choice">submit form?</button>  
+        </form>
+
+        <section id="result" class="hidden">
+        <p id="result-description">RESULTS</p>
+     
+            <p>
+                <a href="./map.html">back to quests</a>
+            </p>
+        </section>
+    </main>
+    <script type="module" src="./src/quest/quest.js"></script>
+</body>
+</html>
